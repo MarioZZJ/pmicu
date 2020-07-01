@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pmicu:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/pmicu_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="pmicu/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pmicu" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

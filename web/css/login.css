@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.wrapper{
+    width: 450px;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.wrapper h3{
+    position: absolute;
+    z-index: 1;
+    width: 28%;
+}
+
+.wrapper .input-data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin: 10px 0 10px 0;
+}
+
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border : none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-data input.entering{
+    border-bottom: 3px solid midnightblue;
+}
+
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-data label.entering{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158d0;
+}
+
+form .button{
+    width:100%;
+    margin-top: 20px;
+}
+form div button{
+    width:39%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height:35px;
+    border: rgba(100,100,100,1) solid 1px;
+    border-radius:10px;
+}

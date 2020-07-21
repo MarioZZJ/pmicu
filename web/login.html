@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="./css/login.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="./js/login.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
 </head>
 <body>
-    <form name="reg" action="/pmicu/LoginServlet" method="post">
-        用户名:<input name="username" type="text" /><br />
-        密码：<input name="password" type="password" /><br />
-        <input type="submit" value="登录" id="bt" />
+<div class="wrapper">
+    <h3>Login</h3>
+    <br />
+    <form action="/pmicu/LoginServlet" method="post">
+    <div class="input-data">
+        <input name="username" type="text">
+        <label>Username</label>
+    </div>
+        <div id="checkResult" style="width:100%;"></div>
+    <div class="input-data">
+        <input name="password" type="password">
+        <label>Password</label>
+    </div>
+    <div class="input-data sig" hidden="hidden">
+        <input id="passwordcheck" type="password">
+        <label>Password</label>
+    </div>
+    <div class="input-data sig" hidden="hidden">
+        <input name="email" type="text">
+        <label>Mailbox</label>
+    </div>
+    <div class="input-data sig" hidden="hidden">
+        <input name="token" type="text">
+        <label>Token</label>
+    </div>
+<div id="notification"></div><!--显示提示信息-->
+    <div class="button sig" style="margin-top:30px;">
+        <button type="submit" id="lgin">登录</button>
+        <button type="button" id="tosign">注册</button>
+    </div>
+    <div class="button sig" style="margin-top:30px;" hidden="hidden">
+        <button type="submit" id="sign" disabled="disabled">注册</button>
+        <button type="button" id="tolgin">登录</button>
+    </div>
     </form>
+</div>
 </body>
+<script>
+    document.write("<script type='text/javascript' src='/js/test.js?"+Math.random()+"'>");
+</script>
 </html>

@@ -17,11 +17,13 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         PrintWriter pw = response.getWriter();
 
-        if("sdc".equals(username) && "zn".equals(password)){
+        DBLoginCheck dblc = new DBLoginCheck();
+        if(dblc.logincheck(username,password)){
             User user = new User();
             user.setUsername(username);
             user.setPassword(password);
             request.getSession().setAttribute("user",user);
+            pw.write("登录成功，牛逼啊！");
             response.sendRedirect("/pmicu/IndexServlet");
         }else {
             pw.write("错误！");

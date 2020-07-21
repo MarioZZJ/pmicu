@@ -13,7 +13,7 @@ public class IndexServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         if (user==null){
-            response.getWriter().print("您还没有登录！请<a href='/pmicu/login.html'>登录</a>");
+            response.getWriter().print("您还没有登录！请<a href='/pmicu/login.jsp'>登录</a>");
         }else {
             response.getWriter().print("您已登录！欢迎" + user.getUsername());
             response.getWriter().print("<a href=/pmicu/LogoutServlet>退出</a>");

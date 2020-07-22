@@ -11,7 +11,7 @@
 <div class="wrapper">
     <h3>Login</h3>
     <br />
-    <form action="/pmicu/LoginServlet" method="post">
+    <form action="/pmicu/LoginServletB" method="post" onsubmit="return ">
     <div class="input-data">
         <input name="username" type="text">
         <label>Username</label>
@@ -33,7 +33,7 @@
         <input name="token" type="text">
         <label>Token</label>
     </div>
-<div id="notification"></div><!--显示提示信息-->
+<div id="notification"> </div><!--显示提示信息-->
     <div class="button sig" style="margin-top:30px;">
         <button type="submit" id="lgin">登录</button>
         <button type="button" id="tosign">注册</button>

@@ -1,3 +1,5 @@
+<%@ page import="cn.mariozzj.sp2.bean.User"  %>
+<%@ page import="javax.servlet.http.HttpSession"  %>
 <%--
   Created by IntelliJ IDEA.
   User: PlumberMario
@@ -59,7 +61,20 @@
             </li>
             </ul>
           <ul class="navbar-right">
-            <button class="btn btn-default navbar-btn" style="margin-right: 10px"><a href='login.jsp'>Login2</a></button>
+            <%
+              String username;
+              String logout;
+              HttpSession indexsession = request.getSession();
+                User user = (User) indexsession.getAttribute("user");
+              if(user != null){
+                username = ("".equals(user.username)) ? "Login" : user.username;
+                logout = ("".equals(user.username)) ? "" : " | Log Out";
+              }else{
+                username="Login";
+                logout = "";
+              }
+            %>
+              <button class="btn btn-default navbar-btn" style="margin-right: 10px"><a href='login.html'><%=username%></a><a href="/pmicu/LogoutServletB"><%=logout%>></a></button>
           </ul>
         </nav>
       </div>
@@ -131,7 +146,6 @@
         <h2>Studying</h2>
         <p id="desc1">Real name Zhejun Zheng. I am currently a sophomore in Information Management Science Dept., School of Information Management, Wuhan University. </p>
         <p><a class="btn btn-default" id="btn01" role="button" >View details &raquo;</a></p>
-          <button id="hide">hide</button>>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <img class="img-circle" src="image/coding.svg" alt="studying" width="140" height="140">

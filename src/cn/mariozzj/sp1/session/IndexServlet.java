@@ -16,7 +16,7 @@ public class IndexServlet extends HttpServlet {
             response.getWriter().print("您还没有登录！请<a href='/pmicu/login.jsp'>登录</a>");
         }else {
             response.getWriter().print("您已登录！欢迎" + user.getUsername());
-            response.getWriter().print("<a href=/pmicu/LogoutServlet>退出</a>");
+            response.getWriter().print("<a href=/pmicu/LogoutServletB>退出</a>");
 
             // 创建Cookie存放Session的标识号
             Cookie cookie = new Cookie("JSESSIONID", session.getId());

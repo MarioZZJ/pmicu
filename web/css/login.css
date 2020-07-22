@@ -24,7 +24,8 @@ body{
 .wrapper h3{
     position: absolute;
     z-index: 1;
-    width: 28%;
+    width: 390px;
+
 }
 
 .wrapper .input-data{

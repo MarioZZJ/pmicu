@@ -1,0 +1,71 @@
+@charset "utf-8";
+@font-face {
+    font-family: MILANPRO;
+    src: url("../font/MILanPro_DemiBold.ttf")/*"../"表示上一级目录，"../../"表示上两级目录。目录为本文件所在目录，与html定义无关*/
+      }
+
+@font-face {
+font-family: SIMFANG;
+src: url("../font/simfang.ttf");
+}
+body {
+color: #000000;
+background-color: #ffffff;
+}
+
+.page {
+position: fixed;
+width: 100%;
+height: 100%;
+}
+
+.time_container,
+.date_container {
+width: 100%;
+margin: auto;
+text-align: center;
+}
+
+.time_container {
+top: 0;
+margin:0px;
+height: 45%;
+}
+
+.time {
+padding-top: 10px;
+font-size: 15rem;
+font-family: MILANPRO;
+}
+
+.date {
+padding-top: 0px;
+font-size: 5.5rem;
+}
+
+.sig{
+    margin-right: 50px;
+    text-align: right;
+    height:10%;
+}
+.motto_container{
+    margin-top:10px;
+    text-align: center;
+    font-family: SIMFANG;
+}
+.ddls{
+    
+    margin-left: 6%;
+    margin-right: 6%;
+    float: left;
+}
+.subddl{
+    float: left;
+    width: 400px;
+    font-size: 36px;
+    text-align: left;
+}
+.subddl div{
+    text-align: left;
+    margin-left: 3%;
+}
